@@ -11,3 +11,7 @@ jobs:
         steps:
             - name: Show the message
               run: echo "Hello World"
+            - name: Show the date
+              run: date
+            - name: Show directories
+              run: ls -l
