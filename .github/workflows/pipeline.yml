@@ -30,3 +30,7 @@ jobs:
             command: npm run test
             start: npm run dev
             wait-on: http://localhost:3000
+      - name: Deploy
+        run: |
+          echo "fake deploy because heroku is not free anymore
+          and Vercel have its own in-platform deploy hehehe"
