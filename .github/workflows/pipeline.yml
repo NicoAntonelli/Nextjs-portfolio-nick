@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: npm ci
       - name: Lint
         run: npm run lint
       - name: Build
@@ -29,4 +29,4 @@ jobs:
             component: true
             command: npm run test
             start: npm run dev
-            wait-on: http://localhost:3000 
+            wait-on: http://localhost:3000
