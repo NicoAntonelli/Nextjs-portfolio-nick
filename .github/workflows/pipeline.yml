@@ -28,8 +28,6 @@ jobs:
         with:
           cache: 'npm'
           node-version: 18
-      - name: Install dependencies
-        run: npm ci
   
   lint:
     needs: [dependencies]
