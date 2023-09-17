@@ -8,13 +8,17 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  deploy:
+  avoid_redundancy:
     runs-on: ubuntu-22.04
     steps:
       - name: Cancel previous redundant build
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ github.token }}
+  
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
@@ -27,8 +31,45 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
+
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
       - name: Build
         run: npm run build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: .next
+          path: .next
+
+  test:
+    needs: [lint, build]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - uses: actions/download-artifact@v2
+        with:
+          name: .next
+          path: .next
       - name: Testing - Components & E2E
         uses: cypress-io/github-action@v6
         with:
@@ -36,6 +77,15 @@ jobs:
             command: npm run test
             start: npm run dev
             wait-on: http://localhost:3000
+          
+  deploy:
+    needs: [test]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Deploy
         if: ${{ github.event_name == 'push' }}
         run: |
