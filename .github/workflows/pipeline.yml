@@ -15,8 +15,8 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ github.token }}
-  
-  lint:
+
+  dependencies:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout Repo
@@ -26,6 +26,23 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
+          cache: 'npm'
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+  
+  lint:
+    needs: [dependencies]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
           node-version: 18
       - name: Install dependencies
         run: npm ci
@@ -33,6 +50,7 @@ jobs:
         run: npm run lint
 
   build:
+    needs: [dependencies]
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout Repo
@@ -42,12 +60,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
+          cache: 'npm'
           node-version: 18
       - name: Install dependencies
         run: npm ci
       - name: Build
         run: npm run build
-      - uses: actions/upload-artifact@v2
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
         with:
           name: .next
           path: .next
@@ -63,10 +83,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
+          cache: 'npm'
           node-version: 18
       - name: Install dependencies
         run: npm ci
-      - uses: actions/download-artifact@v2
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
         with:
           name: .next
           path: .next
