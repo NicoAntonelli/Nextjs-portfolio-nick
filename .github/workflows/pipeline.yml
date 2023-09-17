@@ -2,8 +2,10 @@ name: Deployment Pipeline
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize]
 
 jobs:
   deploy:
@@ -31,6 +33,7 @@ jobs:
             start: npm run dev
             wait-on: http://localhost:3000
       - name: Deploy
+        if: ${{ github.event_name == 'push' }}
         run: |
           echo "fake deploy because heroku is not free anymore
           and Vercel have its own in-platform deploy hehehe"
