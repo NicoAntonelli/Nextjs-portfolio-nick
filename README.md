@@ -1,6 +1,8 @@
 # Next.JS Portfolio Nick
 Animated personal portfolio project because... why not? doing it sounded really fun
 
+[![Deployment Pipeline](https://github.com/NicoAntonelli/Nextjs-portfolio-nick/actions/workflows/pipeline.yml/badge.svg)](https://github.com/NicoAntonelli/Nextjs-portfolio-nick/actions/workflows/pipeline.yml)
+
 ## Getting started
 1. Clone this repository
 2. Run `npm install` in the project directory
@@ -10,6 +12,7 @@ Animated personal portfolio project because... why not? doing it sounded really 
 | Name | What adds to the portfolio? |
 | :- | :- |
 | :ballot_box_with_check: TypeScript | Programming language that builds on JavaScript |
+| :ballot_box_with_check: Node.JS | JavaScript runtime. Without node, nothing would work  |
 | :ballot_box_with_check: Next.JS | Fullstack framework for React.js |
 | :ballot_box_with_check: React.JS | In the bottom, we all now the components are in React.js |
 | :ballot_box_with_check: React-Hook-Forms | Easy-to-use fast forms |
