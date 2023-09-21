@@ -1,4 +1,5 @@
-import Header from '@/components/Header'
+import Header from '@/components/header/header'
+import Hero from '@/components/hero/hero'
 import Image from 'next/image'
 
 export default function Home() {
@@ -8,7 +9,9 @@ export default function Home() {
             <Header />
 
             {/* Hero */}
-            <section id="hero"></section>
+            <section id="hero">
+                <Hero />
+            </section>
 
             {/* About */}
             <section id="about"></section>
