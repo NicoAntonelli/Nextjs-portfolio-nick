@@ -20,6 +20,7 @@ Animated personal portfolio project because... why not? doing it sounded really 
 | :pushpin: React.JS                      | In the bottom, we all now the components are in React.js |
 | :bust_in_silhouette: React-Hook-Forms   | Easy-to-use fast forms                                   |
 | :earth_americas: React-Social-Icons     | Icons that renders detecting the base URL                |
+| :keyboard: React-Simple-Typewriter      | Self-explanatory...                                      |
 | :film_projector: Framer Motion          | Cool animations                                          |
 | :framed_picture: Tailwind CSS + PostCSS | Simple stylization                                       |
 | :desktop_computer: Sanity.io            | Simple backend more-than-enough for this project         |
