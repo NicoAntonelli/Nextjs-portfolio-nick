@@ -8,16 +8,22 @@ export default function Home() {
             <Header />
 
             {/* Hero */}
+            <section id="hero"></section>
 
             {/* About */}
+            <section id="about"></section>
 
             {/* Experience */}
+            <section id="experience"></section>
 
             {/* Projects */}
+            <section id="projects"></section>
 
             {/* Skills */}
+            <section id="skills"></section>
 
             {/* Contact Me */}
+            <section id="contact-me"></section>
         </main>
     )
 }
