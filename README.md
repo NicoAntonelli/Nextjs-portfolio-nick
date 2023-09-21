@@ -12,20 +12,20 @@ Animated personal portfolio project because... why not? doing it sounded really 
 
 ## Technologies used
 
-| Name                                       | What adds to the portfolio?                              |
-| :----------------------------------------- | :------------------------------------------------------- |
-| :ballot_box_with_check: TypeScript         | Programming language that builds on JavaScript           |
-| :ballot_box_with_check: Node.JS            | JavaScript runtime. Without node, nothing would work     |
-| :ballot_box_with_check: Next.JS            | Fullstack framework for React.js                         |
-| :ballot_box_with_check: React.JS           | In the bottom, we all now the components are in React.js |
-| :ballot_box_with_check: React-Hook-Forms   | Easy-to-use fast forms                                   |
-| :ballot_box_with_check: React-Social-Icons | Icons that renders detecting the base URL                |
-| :ballot_box_with_check: Framer Motion      | Cool animations                                          |
-| :ballot_box_with_check: Tailwind CSS       | Simple stylization                                       |
-| :ballot_box_with_check: Sanity.io          | Simple backend more-than-enough for this project         |
-| :ballot_box_with_check: Cypress            | Component-level and E2E testing                          |
-| :ballot_box_with_check: GitHub Actions     | CI/CD automation                                         |
-| :ballot_box_with_check: Deploy in Vercel   | Deployment is very important!                            |
+| Name                                    | What adds to the portfolio?                              |
+| :-------------------------------------- | :------------------------------------------------------- |
+| :pushpin: TypeScript                    | Programming language that builds on JavaScript           |
+| :pushpin: Node.JS                       | JavaScript runtime. Without node, nothing would work     |
+| :pushpin: Next.JS                       | Fullstack framework for React.js                         |
+| :pushpin: React.JS                      | In the bottom, we all now the components are in React.js |
+| :bust_in_silhouette: React-Hook-Forms   | Easy-to-use fast forms                                   |
+| :earth_americas: React-Social-Icons     | Icons that renders detecting the base URL                |
+| :film_projector: Framer Motion          | Cool animations                                          |
+| :framed_picture: Tailwind CSS + PostCSS | Simple stylization                                       |
+| :desktop_computer: Sanity.io            | Simple backend more-than-enough for this project         |
+| :test_tube: Cypress                     | Component-level and E2E testing                          |
+| :page_with_curl: GitHub Actions         | CI/CD automation                                         |
+| :rocket: Deploy in Vercel               | Deployment is very important!                            |
 
 ## Author
 
