@@ -2,23 +2,22 @@ import Header from '@/components/Header'
 import Image from 'next/image'
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {/* Header */}
-      <Header />
+    return (
+        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+            {/* Header */}
+            <Header />
 
-      {/* Hero */}
+            {/* Hero */}
 
-      {/* About */}
+            {/* About */}
 
-      {/* Experience */}
+            {/* Experience */}
 
-      {/* Projects */}
+            {/* Projects */}
 
-      {/* Skills */}
-      
-      {/* Contact Me */}
-      
-    </main>
-  )
+            {/* Skills */}
+
+            {/* Contact Me */}
+        </main>
+    )
 }
