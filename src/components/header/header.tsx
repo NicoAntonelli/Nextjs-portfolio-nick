@@ -1,12 +1,9 @@
 'use client'
-
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
 
-type Props = {}
-
-function Header({}: Props) {
+const Header = () => {
     return (
         <header className="flex justify-between p-5 max-w-7xl mx-auto z-20">
             {/* Social Icons */}
