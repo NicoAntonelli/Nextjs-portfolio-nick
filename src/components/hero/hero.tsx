@@ -2,6 +2,7 @@
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './backgroundCircles'
+import Image from 'next/image'
 
 const Hero = () => {
     const [text, count] = useTypewriter({
@@ -22,6 +23,14 @@ const Hero = () => {
     return (
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircles />
+            <div className="relative h-32 w-32">
+                <Image
+                    className="relative rounded-full mx-auto object-cover"
+                    src={'/Nick_prop.png'}
+                    alt={'Photo of Nico Antonelli'}
+                    fill={true}
+                />
+            </div>
             <h1>
                 <span>{text}</span>
                 <Cursor cursorColor="#e66c2c" />
