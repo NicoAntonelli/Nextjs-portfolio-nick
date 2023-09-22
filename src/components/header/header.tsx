@@ -35,9 +35,11 @@ const Header = () => {
                     bgColor="transparent"
                     target="blank"
                 />
-                <p className="uppercase hidden md:inline-flex text-sm">
+                <a
+                    href="mailto:niconelli2@gmail.com"
+                    className="uppercase hidden md:inline-flex text-sm">
                     Get in touch
-                </p>
+                </a>
             </motion.div>
         </header>
     )
