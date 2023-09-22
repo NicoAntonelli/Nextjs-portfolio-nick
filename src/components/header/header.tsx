@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 
 const Header = () => {
     return (
-        <header className="flex justify-between p-5 max-w-7xl mx-auto z-20">
+        <header className="flex justify-between top-0 p-5 max-w-7xl mx-auto sticky z-20">
             {/* Social Icons */}
             <motion.div
-                className="flex flex-row gap-2 items-center"
+                className="flex flex-row items-center"
                 initial={{ x: -500, opacity: 0, scale: 0.5 }}
                 animate={{ x: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5 }}>
