@@ -31,10 +31,15 @@ const Hero = () => {
                     fill={true}
                 />
             </div>
-            <h1>
-                <span>{text}</span>
-                <Cursor cursorColor="#e66c2c" />
-            </h1>
+            <div>
+                <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+                    Software Engineer
+                </h2>
+                <h1 className="text-4xl lg:text-6xl font-semibold px-10">
+                    <span className="mr-1">{text}</span>
+                    <Cursor cursorColor="#e66c2c" />
+                </h1>
+            </div>
         </div>
     )
 }
