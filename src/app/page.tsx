@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Home() {
     return (
-        <main className="min-h-screen">
+        <main className="min-h-screen bg-[rgb(30,30,30)] text-white">
             {/* Social Icons & Email */}
             <Header />
 
