@@ -9,7 +9,7 @@ const About = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}>
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl">
                 About
             </h3>
 
@@ -22,20 +22,34 @@ const About = () => {
                 viewport={{ once: true }}
             />
 
-            <div className="space-y-10 px-0 md:px-10">
-                <h4>
+            <div className="space-y-5 px-0 md:px-10">
+                <h4 className="text-3xl semibold">
                     Here's a{' '}
                     <span className="underline decoration-[#e66c2c]/80">
                         little
                     </span>{' '}
                     background
                 </h4>
-                <p className="text-base">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nisi rerum vel debitis velit odio facilis maxime assumenda
-                    a, libero magni at consectetur est tenetur molestias earum
-                    quas itaque dicta maiores!
-                </p>
+                <div className="text-xs md:text-sm lg:text-base">
+                    <p className="pb-3">
+                        Hi, I'm Nico—a passionate software web developer with a
+                        deep love for both frontend and backend development. I
+                        thrive on crafting nice user experiences through
+                        intuitive interfaces and robust, efficient server-side
+                        solutions. I am a final year software engineering
+                        student also captivated by software architecture, it is
+                        essential to look for elegant and scalable designs to
+                        address complex problems.
+                    </p>
+                    <p>
+                        I firmly believe that great software is not just
+                        functional; it's a manifestation of creativity combined
+                        with technical precision. When I'm not coding or
+                        designing software systems, you'll likely find me
+                        exploring new technologies or reading about the latest
+                        industry trends.
+                    </p>
+                </div>
             </div>
         </motion.div>
     )
