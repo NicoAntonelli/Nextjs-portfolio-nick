@@ -14,7 +14,7 @@ const About = () => {
             </h3>
 
             <motion.img
-                className="w-32 h-32 mt-[120px] mb-0 flex flex-shrink-0 rounded-full object-cover md:mt-10 lg:mt-0 md:rounded-lg md:w-52 md:h-52 xl:w-[300px] xl:h-[300px]"
+                className="w-32 h-32 mt-[120px] mb-0 flex flex-shrink-0 rounded-full object-cover md:mt-15 lg:mt-0 md:rounded-lg md:w-52 md:h-52 xl:w-[300px] xl:h-[300px]"
                 src="nick_profile_ai.png"
                 initial={{ x: -200, opacity: 0 }}
                 transition={{ duration: 1.2 }}
@@ -23,7 +23,7 @@ const About = () => {
             />
 
             <div className="space-y-5 px-0 md:px-10">
-                <h4 className="text-3xl semibold md:mt-10 lg:mt-0">
+                <h4 className="text-3xl semibold md:mt-15 lg:mt-0">
                     Here's a{' '}
                     <span className="underline decoration-[#e66c2c]/80">
                         little
