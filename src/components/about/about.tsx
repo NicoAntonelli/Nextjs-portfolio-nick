@@ -9,9 +9,7 @@ const About = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}>
-            <h3 className="absolute top-24 uppercase tracking-[20px] mr-[-20px] text-gray-500 text-2xl">
-                About
-            </h3>
+            <h3 className="section-title">About</h3>
 
             <motion.img
                 className="w-32 h-32 mt-[120px] mb-0 flex flex-shrink-0 rounded-full object-cover md:mt-15 lg:mt-0 md:rounded-lg md:w-52 md:h-52 xl:w-[300px] xl:h-[300px]"
