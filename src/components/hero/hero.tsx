@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
-import BackgroundCircles from './backgroundCircles'
+import BackgroundCircles from './backgroundCircles/backgroundCircles'
 import Image from 'next/image'
 import Link from 'next/link'
 
