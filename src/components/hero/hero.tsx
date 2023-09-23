@@ -27,7 +27,7 @@ const Hero = () => {
             <div className="relative h-32 w-32">
                 <Image
                     className="relative rounded-full mx-auto object-cover"
-                    src={'/Nick_prop.png'}
+                    src={'/nick_profile_photo.png'}
                     alt={'Photo of Nico Antonelli'}
                     fill={true}
                 />
