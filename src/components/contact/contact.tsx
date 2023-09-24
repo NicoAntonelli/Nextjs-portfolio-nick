@@ -3,8 +3,8 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <div>
-            <p>Contact</p>
+        <div className="flex flex-col relative h-screen justify-center items-center">
+            <h3 className="section-title">Contact Me</h3>
         </div>
     )
 }
