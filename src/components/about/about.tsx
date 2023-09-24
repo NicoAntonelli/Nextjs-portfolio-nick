@@ -12,7 +12,7 @@ const About = () => {
             <h3 className="section-title">About</h3>
 
             <motion.img
-                className="w-32 h-32 mt-[120px] mb-0 flex flex-shrink-0 rounded-full object-cover md:mt-15 lg:mt-0 md:rounded-lg md:w-52 md:h-52 xl:w-[300px] xl:h-[300px]"
+                className="w-32 h-32 mt-24 md:mt-15 lg:mt-0 mb-0 flex flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-52 md:h-52 xl:w-[300px] xl:h-[300px]"
                 src="nick_profile_ai.png"
                 initial={{ x: -200, opacity: 0 }}
                 transition={{ duration: 1.2 }}
