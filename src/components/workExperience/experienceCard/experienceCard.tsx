@@ -5,16 +5,15 @@ import { motion } from 'framer-motion'
 
 const ExperienceCard = () => {
     return (
-        <article className="flex flex-col rounded-lg items-center mt-20 p-5 space-y-2 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#222] cursor-pointer opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-hidden">
+        <article className="flex flex-col rounded-lg items-center mt-24 p-5 space-y-2 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#222] cursor-pointer opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-hidden">
             <motion.img
-                className="w-20 h-20 rounded-full xl:h-[100px] xl:w-[100px] object-cover object-center"
+                className="w-24 h-24 rounded-full xl:h-[100px] xl:w-[100px] object-cover object-center"
                 src="la_mutual_amr.jpg"
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
             />
-
             <div className="px-5 md:px-10">
                 <h4 className="text-4xl font-light">Software Dev</h4>
                 <p className="text-2xl font-bold mt-1">La Mutual de AMR</p>
