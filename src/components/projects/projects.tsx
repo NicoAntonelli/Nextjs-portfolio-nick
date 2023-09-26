@@ -9,7 +9,7 @@ const Projects = () => {
     return (
         <div className="flex flex-col md:flex-row relative h-screen max-w-full justify-evenly items-center text-left mx-auto overflow-hidden z-0">
             <h3 className="section-title">Projects</h3>
-            <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+            <div className="relative w-full flex snap-x snap-mandatory overflow-x-scroll overflow-y-hidden scrollbar-custom z-20">
                 {projects.map((project, index) => (
                     <motion.div
                         className="w-screen h-screen flex flex-col flex-shrink-0 items-center justify-center space-y-5 p-20 md:p-40 snap-center"

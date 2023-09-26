@@ -12,7 +12,7 @@ const WorkExperience = () => {
             transition={{ duration: 1.5 }}>
             <h3 className="section-title">Experience</h3>
 
-            <div className="flex w-full space-x-5 p-10 snap-x snap-mandatory overflow-x-scroll">
+            <div className="flex w-full space-x-5 p-10 snap-x snap-mandatory overflow-x-scroll scrollbar-custom">
                 <ExperienceCard />
                 <ExperienceCard />
                 <ExperienceCard />

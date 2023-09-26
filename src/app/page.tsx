@@ -6,9 +6,9 @@ import Projects from '@/components/projects/projects'
 import Skills from '@/components/skills/skills'
 import WorkExperience from '@/components/workExperience/workExperience'
 
-export default function Home() {
+const Home = () => {
     return (
-        <main className="h-screen bg-[rgb(30,30,30)] text-white snap snap-y snap-mandatory overflow-scroll z-0">
+        <main className="h-screen bg-[rgb(30,30,30)] text-white snap snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scrollbar-custom z-0">
             {/* Social Icons & Email */}
             <Header />
 
@@ -44,3 +44,5 @@ export default function Home() {
         </main>
     )
 }
+
+export default Home
