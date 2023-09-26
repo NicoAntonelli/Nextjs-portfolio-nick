@@ -1,5 +1,6 @@
 import About from '@/components/about/about'
 import Contact from '@/components/contact/contact'
+import Footer from '@/components/footer/footer'
 import Header from '@/components/header/header'
 import Hero from '@/components/hero/hero'
 import Projects from '@/components/projects/projects'
@@ -12,35 +13,33 @@ const Home = () => {
             {/* Social Icons & Email */}
             <Header />
 
-            {/* Hero */}
+            {/* Sections */}
             <section id="hero" className="snap-start">
                 <Hero />
             </section>
 
-            {/* About */}
             <section id="about" className="snap-center">
                 <About />
             </section>
 
-            {/* Experience */}
             <section id="experience" className="snap-center">
                 <WorkExperience />
             </section>
 
-            {/* Projects */}
             <section id="projects" className="snap-start">
                 <Projects />
             </section>
 
-            {/* Skills */}
             <section id="skills" className="snap-start">
                 <Skills />
             </section>
 
-            {/* Contact Me */}
             <section id="contact" className="snap-start">
                 <Contact />
             </section>
+
+            {/* Back to Top */}
+            <Footer />
         </main>
     )
 }
