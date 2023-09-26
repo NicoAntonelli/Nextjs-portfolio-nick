@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
+import { EnvelopeIcon } from '@heroicons/react/24/solid'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
 
@@ -31,7 +32,7 @@ const Header = () => {
                     initial={{ x: 500, opacity: 0, scale: 0.5 }}
                     animate={{ x: 0, opacity: 1, scale: 1 }}
                     transition={{ duration: 1.5 }}>
-                    <SocialIcon network="email" bgColor="transparent" />
+                    <EnvelopeIcon className="h-6 w-6 text-white" />
                     <p className="mt-[2px] uppercase hidden md:inline-flex text-sm">
                         Get in touch
                     </p>
