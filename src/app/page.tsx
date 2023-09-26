@@ -38,7 +38,7 @@ const Home = () => {
             </section>
 
             {/* Contact Me */}
-            <section id="contact-me" className="snap-start">
+            <section id="contact" className="snap-start">
                 <Contact />
             </section>
         </main>
