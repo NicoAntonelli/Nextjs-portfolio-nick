@@ -17,7 +17,7 @@ export default defineType({
         }),
         defineField({
             name: 'heroImage',
-            title: 'Image',
+            title: 'HeroImage',
             type: 'image',
             options: {
                 hotspot: true,
@@ -26,7 +26,7 @@ export default defineType({
         defineField({
             name: 'backgroundInfo',
             title: 'BackgroundInfo',
-            type: 'string',
+            type: 'text',
         }),
         defineField({
             name: 'profilePic',
@@ -58,16 +58,4 @@ export default defineType({
             of: [{ type: 'reference', to: { type: 'social' } }],
         }),
     ],
-
-    preview: {
-        select: {
-            title: 'PageInfo - Portfolio Nick',
-            author: 'Nico.Antonelli',
-            media: 'mainImage',
-        },
-        prepare(selection) {
-            const { author } = selection
-            return { ...selection, subtitle: author && `by ${author}` }
-        },
-    },
 })

@@ -32,16 +32,4 @@ export default defineType({
             validation: (Rule) => Rule.min(0).max(100),
         }),
     ],
-
-    preview: {
-        select: {
-            title: 'Skill - Portfolio Nick',
-            author: 'Nico.Antonelli',
-            media: 'mainImage',
-        },
-        prepare(selection) {
-            const { author } = selection
-            return { ...selection, subtitle: author && `by ${author}` }
-        },
-    },
 })

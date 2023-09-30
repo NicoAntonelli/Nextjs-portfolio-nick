@@ -51,16 +51,4 @@ export default defineType({
             of: [{ type: 'string' }],
         }),
     ],
-
-    preview: {
-        select: {
-            title: 'Experience - Portfolio Nick',
-            author: 'Nico.Antonelli',
-            media: 'mainImage',
-        },
-        prepare(selection) {
-            const { author } = selection
-            return { ...selection, subtitle: author && `by ${author}` }
-        },
-    },
 })
