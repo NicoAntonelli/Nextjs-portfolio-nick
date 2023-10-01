@@ -13,7 +13,8 @@ export default defineType({
         }),
         defineField({
             name: 'url',
-            title: 'Url',
+            title: 'URL',
+            description: 'Link with the social media address',
             type: 'url',
         }),
     ],
