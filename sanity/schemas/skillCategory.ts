@@ -1,37 +1,30 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-    name: 'skill',
-    title: 'Skill',
+    name: 'skillCategory',
+    title: 'SkillCategory',
     type: 'document',
     fields: [
         defineField({
             name: 'title',
             title: 'Title',
-            description: 'Skill name',
+            description: 'Skill category name',
             type: 'string',
         }),
         defineField({
-            name: 'abbreviation',
-            title: 'Abbreviation',
-            description: 'Few-letter abbreviation',
+            name: 'description',
+            title: 'Description',
+            description: 'Brief category explanation',
             type: 'string',
         }),
         defineField({
             name: 'image',
             title: 'Image',
-            description: 'Skill logo',
+            description: 'Image that represents the category',
             type: 'image',
             options: {
                 hotspot: true,
             },
-        }),
-        defineField({
-            name: 'categories',
-            title: 'Categories',
-            description: 'Skill types List',
-            type: 'array',
-            of: [{ type: 'reference', to: { type: 'skillCategory' } }],
         }),
     ],
 })
