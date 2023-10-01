@@ -9,6 +9,9 @@ Animated personal portfolio project because... why not? doing it sounded really 
 1. Clone this repository
 2. Run `npm install` in the project directory
 3. Run `npm run dev` in the project directory
+4. Got to `localhost:3000` (by default, or other custom port) in any browser
+
+> To load new custom data, go to `localhost:3000/studio` (admin only) or configure a new `Sanity.io` project instance of your own (and replace with your `PROJECT_ID` in the `.env` file)
 
 ## Technologies used
 
@@ -22,13 +25,13 @@ Animated personal portfolio project because... why not? doing it sounded really 
 | :film_projector: Framer Motion  | Cool animations                                          |
 | :paintbrush: Prettier           | Nice code formatter                                      |
 | :triangular_ruler: ESLint       | Complete linter with strict rules                        |
-| :desktop_computer: Sanity.io    | Simple backend more-than-enough for this project         |
+| :desktop_computer: Sanity.io    | Simple backend CMS                                       |
 | :test_tube: Cypress             | Component-level and E2E testing                          |
-| :package: Turbo & WebPack       | JavaScript bundlers (Turbo is in beta, so... only dev)   |
+| :package: TurboPack & WebPack   | JavaScript bundlers (Turbo is in beta, so... only dev)   |
 | :page_with_curl: GitHub Actions | CI/CD automation                                         |
 | :rocket: Deploy in Vercel       | Deployment is very important!                            |
 
-> I use WebPack bundler for _Production_ & Turbo bundler only for _Dev_ because Turbo is still on **Beta** in _Next.js 13_. In the future I hope to use Turbo for both Dev and Production.
+> I use WebPack bundler for _Production_ & TurboPack bundler only for _Dev_ because Turbo is still on **Beta** in _Next.js 13_. In the future I hope to use Turbo for both Dev and Production.
 
 ## Other libraries & plugins
 
