@@ -27,14 +27,14 @@ export default defineType({
             },
         }),
         defineField({
-            name: 'dataStarted',
-            title: 'DataStarted',
+            name: 'dateStarted',
+            title: 'DateStarted',
             description: 'First day',
             type: 'date',
         }),
         defineField({
-            name: 'dataEnded',
-            title: 'DataEnded',
+            name: 'dateEnded',
+            title: 'DateEnded',
             description: 'Last day',
             type: 'date',
         }),
