@@ -4,8 +4,9 @@ import { client } from '../../../../sanity/lib/client'
 import PageInfo from '@/entities/PageInfo'
 
 const query: string = groq`
-    *[_type == "pageInfo"]
+    *[_type == "pageInfo"][0]
 `
+// { ..., socials[]-> }
 
 export async function GET(req: NextRequest) {
     const response: PageInfo[] = await client.fetch(query)

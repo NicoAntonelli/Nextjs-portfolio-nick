@@ -4,7 +4,10 @@ import { client } from '../../../../sanity/lib/client'
 import Skill from '@/entities/Skill'
 
 const query: string = groq`
-    *[_type == "skill"]
+    *[_type == "skill"] {
+        ...,
+        categories[]->
+    }
 `
 
 export async function GET(req: NextRequest) {

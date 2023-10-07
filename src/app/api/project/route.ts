@@ -4,7 +4,10 @@ import { client } from '../../../../sanity/lib/client'
 import Project from '@/entities/Project'
 
 const query: string = groq`
-    *[_type == "project"]
+    *[_type == "project"] {
+        ...,
+        technologies[]->
+    }
 `
 
 export async function GET(req: NextRequest) {
