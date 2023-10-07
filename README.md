@@ -9,13 +9,15 @@ Animated personal portfolio project because... why not? doing it sounded really 
 1. Clone this repository
 2. Run `npm install` in the project directory
 3. Run `npm run dev` in the project directory
-4. Got to `localhost:3000` (by default, or other custom port) in any browser
+4. Go to `localhost:3000` (by default, or other custom port) in any browser
+
+> To make API requests, the API base path is `localhost:3000/api/`
 
 > To load new custom data, go to `localhost:3000/studio` (admin only) or configure a new `Sanity.io` project instance of your own (and replace with your `PROJECT_ID` in the `.env` file)
 
 ## Deploy
 
-Sanity deploy: `npm run deploy:sanity`
+-   Sanity deploy --> run `npm run deploy:sanity` in the project directory
 
 ## Technologies used
 
