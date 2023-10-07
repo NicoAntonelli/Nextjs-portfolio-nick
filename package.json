@@ -9,7 +9,8 @@
     "lint": "next lint",
     "prettier": "npx prettier . --write",
     "prettier-check": "npx prettier . --check",
-    "test": "npx cypress run"
+    "test": "npx cypress run",
+    "deploy:sanity": "npx sanity deploy"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",

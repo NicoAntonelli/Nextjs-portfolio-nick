@@ -13,6 +13,10 @@ Animated personal portfolio project because... why not? doing it sounded really 
 
 > To load new custom data, go to `localhost:3000/studio` (admin only) or configure a new `Sanity.io` project instance of your own (and replace with your `PROJECT_ID` in the `.env` file)
 
+## Deploy
+
+Sanity deploy: `npm run deploy:sanity`
+
 ## Technologies used
 
 | Name                            | What adds to the portfolio?                              |
@@ -46,6 +50,6 @@ Animated personal portfolio project because... why not? doing it sounded really 
 
 ## Author
 
-| Name               | GitHub Account                             |
-| :----------------- | :----------------------------------------- |
-| Antonelli, Nicolás | :octocat: https://github.com/NicoAntonelli |
+| Name              | GitHub Account                             |
+| :---------------- | :----------------------------------------- |
+| Nicolás Antonelli | :octocat: https://github.com/NicoAntonelli |
