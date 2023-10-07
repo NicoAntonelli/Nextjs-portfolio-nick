@@ -4,7 +4,7 @@ import SanityImage from './Base/SanityImage'
 import Skill from './Skill'
 
 interface Experience extends SanityCommon {
-    _type: 'Experience'
+    _type: 'experience'
     company: string
     companyImage: SanityImage
     dateStarted: Date

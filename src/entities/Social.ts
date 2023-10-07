@@ -1,7 +1,7 @@
 import SanityCommon from './Base/SanityCommon'
 
 interface Social extends SanityCommon {
-    _type: 'Social'
+    _type: 'social'
     title: string
     url: string
 }

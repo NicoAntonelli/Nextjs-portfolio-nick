@@ -1,8 +1,8 @@
 interface SanityImage {
-    _type: 'Image'
+    _type: 'image'
     asset: {
         _ref: string
-        _type: 'Reference'
+        _type: 'reference'
     }
 }
 

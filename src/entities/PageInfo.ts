@@ -2,7 +2,7 @@ import SanityCommon from './Base/SanityCommon'
 import SanityImage from './Base/SanityImage'
 
 interface PageInfo extends SanityCommon {
-    _type: 'PageInfo'
+    _type: 'pageInfo'
     address: string
     backgroundInformation: string
     email: string

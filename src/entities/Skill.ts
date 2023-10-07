@@ -4,7 +4,7 @@ import SanityImage from './Base/SanityImage'
 import SkillCategory from './SkillCategory'
 
 interface Skill extends SanityCommon {
-    _type: 'Skill'
+    _type: 'skill'
     abbreviation: string
     categories: SkillCategory[]
     image: SanityImage

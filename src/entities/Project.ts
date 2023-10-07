@@ -4,7 +4,7 @@ import SanityImage from './Base/SanityImage'
 import Skill from './Skill'
 
 interface Project extends SanityCommon {
-    _type: 'Project'
+    _type: 'project'
     date: Date
     image: SanityImage
     isNotFinished: boolean
