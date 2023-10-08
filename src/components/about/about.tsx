@@ -10,6 +10,8 @@ type Props = {
 }
 
 const About = ({ pageInfo }: Props) => {
+    const separator = '###'
+
     return (
         <motion.div
             className="flex flex-col relative h-screen justify-evenly items-center text-center md:text-left md:flex-row max-w-7xl px-10 mx-auto"
@@ -37,7 +39,13 @@ const About = ({ pageInfo }: Props) => {
                     background
                 </h4>
                 <div className="text-xs md:text-sm lg:text-base">
-                    {pageInfo?.backgroundInformation}
+                    {pageInfo?.backgroundInfo
+                        .split(separator)
+                        .map((paragraph: string, index: number) => (
+                            <p key={index} className="pb-3">
+                                {paragraph}
+                            </p>
+                        ))}
                 </div>
             </div>
         </motion.div>
