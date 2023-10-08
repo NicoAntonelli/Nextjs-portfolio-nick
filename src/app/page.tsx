@@ -34,10 +34,11 @@ interface Props {
 }
 
 const Home = (props: Props) => {
+    console.log(props)
     return (
         <main className="h-screen bg-[rgb(30,30,30)] text-white snap snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scrollbar-custom z-0">
             {/* Social Icons & Email */}
-            <Header />
+            <Header socials={props.socials} />
 
             {/* Sections */}
             <section id="hero" className="snap-start">
@@ -89,6 +90,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         skillCategories,
         socials,
     }
+
+    console.log(props)
 
     // Regeneration: when a request comes in & at most one every 5 minutes
     return { props, revalidate: 300 }

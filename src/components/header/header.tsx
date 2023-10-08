@@ -5,7 +5,13 @@ import { EnvelopeIcon } from '@heroicons/react/24/solid'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
 
-const Header = () => {
+import Social from '@/entities/Social'
+
+type Props = {
+    socials?: Social[]
+}
+
+const Header = ({ socials }: Props) => {
     return (
         <header className="flex justify-between items-center top-0 p-5 max-w-7xl mx-auto sticky z-20">
             {/* Social Icons */}
@@ -14,16 +20,15 @@ const Header = () => {
                 initial={{ x: -500, opacity: 0, scale: 0.5 }}
                 animate={{ x: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5 }}>
-                <SocialIcon
-                    url="https://www.linkedin.com/in/nico-antonelli/"
-                    bgColor="transparent"
-                    target="blank"
-                />
-                <SocialIcon
-                    url="https://github.com/NicoAntonelli/"
-                    bgColor="transparent"
-                    target="blank"
-                />
+                {socials &&
+                    socials.map((social: Social) => (
+                        <SocialIcon
+                            key={social._id}
+                            url={social.url}
+                            bgColor="transparent"
+                            target="blank"
+                        />
+                    ))}
             </motion.div>
             {/* Email */}
             <Link href="#contact">
