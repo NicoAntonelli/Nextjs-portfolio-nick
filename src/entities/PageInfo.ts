@@ -4,7 +4,7 @@ import SanityImage from './Base/SanityImage'
 interface PageInfo extends SanityCommon {
     _type: 'pageInfo'
     address: string
-    backgroundInformation: string
+    backgroundInfo: string
     email: string
     heroImage: SanityImage
     name: string
