@@ -1,6 +1,6 @@
 import Project from '@/entities/Project'
 
-const fetchProject = async (): Promise<Project[] | undefined> => {
+const fetchProjects = async (): Promise<Project[] | undefined> => {
     try {
         const baseAPI: string = `${process.env.NEXT_PUBLIC_BASE_URL}/api`
         const res: Response = await fetch(`${baseAPI}/project`)
@@ -12,4 +12,4 @@ const fetchProject = async (): Promise<Project[] | undefined> => {
     }
 }
 
-export default fetchProject
+export default fetchProjects
