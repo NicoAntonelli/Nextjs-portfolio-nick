@@ -3,7 +3,13 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import ExperienceCard from './experienceCard/experienceCard'
 
-const WorkExperience = () => {
+import Experience from '@/entities/Experience'
+
+type Props = {
+    experiences?: Experience[]
+}
+
+const WorkExperience = ({ experiences }: Props) => {
     return (
         <motion.div
             className="flex flex-col md:flex-row relative h-screen max-w-full justify-evenly items-center text-left px-10 mx-auto overflow-hidden"
@@ -13,9 +19,12 @@ const WorkExperience = () => {
             <h3 className="section-title">Experience</h3>
 
             <div className="flex w-full space-x-5 p-10 snap-x snap-mandatory overflow-x-scroll scrollbar-custom">
-                <ExperienceCard />
-                <ExperienceCard />
-                <ExperienceCard />
+                {experiences?.map((experience: Experience) => (
+                    <ExperienceCard
+                        key={experience._id}
+                        experience={experience}
+                    />
+                ))}
             </div>
         </motion.div>
     )

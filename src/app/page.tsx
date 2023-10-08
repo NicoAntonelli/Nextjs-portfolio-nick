@@ -28,7 +28,7 @@ const Home = async () => {
             </section>
 
             <section id="experience" className="snap-center">
-                <WorkExperience />
+                <WorkExperience experiences={data.experiences} />
             </section>
 
             <section id="projects" className="snap-start">
