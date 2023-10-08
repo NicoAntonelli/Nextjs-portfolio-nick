@@ -5,10 +5,17 @@ import BackgroundCircles from './backgroundCircles/backgroundCircles'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Hero = () => {
+import PageInfo from '@/entities/PageInfo'
+import { urlForImage } from '../../../sanity/lib/image'
+
+type Props = {
+    pageInfo?: PageInfo
+}
+
+const Hero = ({ pageInfo }: Props) => {
     const [text, count] = useTypewriter({
         words: [
-            "Hi, I'm Nico Antonelli",
+            `Hi, I'm ${pageInfo?.name}`,
             'I love web development, from backend to frontend!',
             "If you see a bug here, don't worry, it will soon be a new feature",
             '[Error 404: Ironic joke not found]',
@@ -24,17 +31,19 @@ const Hero = () => {
     return (
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircles />
-            <div className="relative h-32 w-32">
-                <Image
-                    className="relative rounded-full mx-auto object-cover"
-                    src={'/nick_profile_photo.png'}
-                    alt={'Photo of Nico Antonelli'}
-                    fill={true}
-                />
-            </div>
+            {pageInfo?.heroImage && (
+                <div className="relative h-32 w-32">
+                    <Image
+                        className="relative rounded-full mx-auto object-cover"
+                        src={urlForImage(pageInfo.heroImage).url()}
+                        alt={'Photo of Nico Antonelli'}
+                        fill={true}
+                    />
+                </div>
+            )}
             <div className="z-20">
                 <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] mr-[-15px]">
-                    Software Engineer
+                    {pageInfo?.role}
                 </h2>
                 <h1 className="text-4xl lg:text-6xl font-semibold px-10">
                     <span className="mr-1">{text}</span>

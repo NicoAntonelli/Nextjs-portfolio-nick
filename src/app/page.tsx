@@ -20,11 +20,11 @@ const Home = async () => {
 
             {/* Sections */}
             <section id="hero" className="snap-start">
-                <Hero />
+                <Hero pageInfo={data.pageInfo} />
             </section>
 
             <section id="about" className="snap-center">
-                <About />
+                <About pageInfo={data.pageInfo} />
             </section>
 
             <section id="experience" className="snap-center">
