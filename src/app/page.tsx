@@ -32,11 +32,11 @@ const Home = async () => {
             </section>
 
             <section id="projects" className="snap-start">
-                <Projects />
+                <Projects projects={data.projects} />
             </section>
 
             <section id="skills" className="snap-start">
-                <Skills />
+                <Skills skills={data.skills} />
             </section>
 
             <section id="contact" className="snap-start">

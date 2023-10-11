@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { urlForImage } from '../../../../sanity/lib/image'
 
 import Skill from '@/entities/Skill'
-import { urlForImage } from '../../../../sanity/lib/image'
 
 type Props = {
     skill: Skill
