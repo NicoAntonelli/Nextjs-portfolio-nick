@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
+    "build:vercel": "npx vercel build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "npx prettier . --write",
     "prettier-check": "npx prettier . --check",
     "test": "npx cypress run",
+    "deploy": "npx vercel deploy --prebuilt",
     "deploy:sanity": "npx sanity deploy"
   },
   "dependencies": {
