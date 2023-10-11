@@ -10,7 +10,6 @@ type Props = {
 }
 
 const WorkExperience = ({ experiences }: Props) => {
-    console.log(experiences)
     // Sorting function
     const orderLogic = (a: Experience, b: Experience) => a.order - b.order
 
