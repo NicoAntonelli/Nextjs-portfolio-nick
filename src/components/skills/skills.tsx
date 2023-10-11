@@ -1,9 +1,26 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import SkillInfo from './skillInfo/skillInfo'
 
-const Skills = () => {
+import Skill from '@/entities/Skill'
+
+type Props = {
+    skills?: Skill[]
+}
+
+const Skills = ({ skills }: Props) => {
+    // Sorting function
+    const orderLogic = (a: Skill, b: Skill) => {
+        return a.title > b.title ? 1 : -1
+    }
+
+    const [skillsSorted, setSkillsSorted] = useState<Skill[]>()
+
+    useEffect(() => {
+        setSkillsSorted(skills?.sort(orderLogic))
+    }, [])
+
     return (
         <motion.div
             className="flex flex-col xl:flex-row relative h-screen justify-center items-center text-center md:text-left min-w-screen max-w-[2000px] xl:space-y-0 xl:px-10 mx-auto"
@@ -15,23 +32,25 @@ const Skills = () => {
                 Hover over a skill for more info
             </h4>
 
-            <div className="grid grid-cols-4 gap-x-8 gap-y-4 pt-10 xl:pt-20">
-                <SkillInfo />
-                <SkillInfo />
-                <SkillInfo />
-                <SkillInfo />
-                <SkillInfo />
-                <SkillInfo />
-                <SkillInfo />
-                <SkillInfo />
-                <SkillInfo directionLeft />
-                <SkillInfo directionLeft />
-                <SkillInfo directionLeft />
-                <SkillInfo directionLeft />
-                <SkillInfo directionLeft />
-                <SkillInfo directionLeft />
-                <SkillInfo directionLeft />
-                <SkillInfo directionLeft />
+            <div className="grid grid-cols-6 md:grid-cols-7 xl:grid-cols-9 gap-x-6 gap-y-4 pt-20 md:pt-24 xl:pt-36">
+                {skillsSorted && (
+                    <>
+                        {skillsSorted
+                            .slice(0, skillsSorted.length / 2)
+                            .map((skill: Skill) => (
+                                <SkillInfo key={skill._id} skill={skill} />
+                            ))}
+                        {skillsSorted
+                            .slice(skillsSorted.length / 2, skillsSorted.length)
+                            .map((skill: Skill) => (
+                                <SkillInfo
+                                    key={skill._id}
+                                    skill={skill}
+                                    directionLeft
+                                />
+                            ))}
+                    </>
+                )}
             </div>
         </motion.div>
     )
