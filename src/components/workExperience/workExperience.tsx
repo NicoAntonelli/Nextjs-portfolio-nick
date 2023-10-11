@@ -10,6 +10,10 @@ type Props = {
 }
 
 const WorkExperience = ({ experiences }: Props) => {
+    console.log(experiences)
+    // Sorting function
+    const orderLogic = (a: Experience, b: Experience) => a.order - b.order
+
     return (
         <motion.div
             className="flex flex-col md:flex-row relative h-screen max-w-full justify-evenly items-center text-left px-10 mx-auto overflow-hidden"
@@ -19,7 +23,7 @@ const WorkExperience = ({ experiences }: Props) => {
             <h3 className="section-title">Experience</h3>
 
             <div className="flex w-full space-x-5 p-10 snap-x snap-mandatory overflow-x-scroll scrollbar-custom">
-                {experiences?.map((experience: Experience) => (
+                {experiences?.sort(orderLogic).map((experience: Experience) => (
                     <ExperienceCard
                         key={experience._id}
                         experience={experience}
