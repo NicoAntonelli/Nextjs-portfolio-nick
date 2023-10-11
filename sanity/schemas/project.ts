@@ -39,6 +39,12 @@ export default defineType({
             type: 'boolean',
         }),
         defineField({
+            name: 'order',
+            title: 'Order',
+            description: 'Desired presentation order number',
+            type: 'number',
+        }),
+        defineField({
             name: 'technologies',
             title: 'Technologies',
             description: 'Skill list',

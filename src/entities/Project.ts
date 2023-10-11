@@ -10,6 +10,7 @@ interface Project extends SanityCommon {
     isNotFinished: boolean
     linkToBuild: string
     summary: string
+    order: number
     technologies: Skill[]
     title: string
 }

@@ -11,8 +11,9 @@ interface Experience extends SanityCommon {
     dateEnded: Date
     isCurrentlyWorkingHere: boolean
     jobTitle: string
-    technologies: Skill[]
+    order: number
     points: string[]
+    technologies: Skill[]
 }
 
 export default Experience
