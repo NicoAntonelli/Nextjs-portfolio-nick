@@ -17,7 +17,8 @@ Animated personal portfolio project because... why not? doing it sounded really 
 
 ## Deploy
 
--   Sanity deploy --> run `npm run deploy:sanity` in the project directory
+-   Frontend Deploy in Vercel --> run `npm run build:vercel` in the project directory, then run `npm run deploy`
+-   Backend Sanity Deploy --> run `npm run deploy:sanity` in the project directory
 
 ## Technologies used
 
