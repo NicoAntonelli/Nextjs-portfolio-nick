@@ -31,7 +31,7 @@ const About = ({ pageInfo }: Props) => {
                 />
             )}
             <div className="space-y-5 px-0 md:px-10">
-                <h4 className="text-3xl semibold md:mt-15 lg:mt-0">
+                <h4 className="text-3xl semibold mt md:mt-10 lg:mt-0">
                     Here's a{' '}
                     <span className="underline decoration-[#e66c2c]/80">
                         little

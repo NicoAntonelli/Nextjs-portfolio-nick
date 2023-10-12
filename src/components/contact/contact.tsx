@@ -36,7 +36,7 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row relative h-screen max-w-7xl px-10 mx-auto justify-evenly items-center text-center md:text-left">
             <h3 className="section-title">Contact Me</h3>
             <div className="flex flex-col space-y-6">
-                <h4 className="text-2xl font-semibold text-center mt-20">
+                <h4 className="text-xl md:text-2xl font-semibold text-center mt-20">
                     I have got just what you need.{' '}
                     <span className="underline decoration-[#e66c2c]/70">
                         Lets Talk

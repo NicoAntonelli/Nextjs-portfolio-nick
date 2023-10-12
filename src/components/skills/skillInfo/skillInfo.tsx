@@ -16,7 +16,7 @@ const SkillInfo = ({ skill, directionLeft }: Props) => {
             <motion.img
                 className="w-8 h-8 md:h-10 md:w-10 xl:w-12 xl:h-12 rounded-full border border-gray-500 object-cover filter group-hover:grayscale transition duration-300 ease-in-out"
                 src={urlForImage(skill.image).url()}
-                initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
+                initial={{ x: directionLeft ? -100 : 100, opacity: 0 }}
                 transition={{ duration: 1 }}
                 whileInView={{ x: 0, opacity: 1 }}
             />

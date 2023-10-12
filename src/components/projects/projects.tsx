@@ -36,15 +36,15 @@ const Projects = ({ projects }: Props) => {
                 {projects &&
                     projects.sort(orderLogic).map((project, index) => (
                         <motion.div
-                            className="w-screen h-screen flex flex-col flex-shrink-0 items-center justify-center space-y-5 p-20 md:p-40 lg:pt-40 snap-center"
+                            className="w-screen h-screen flex flex-col flex-shrink-0 items-center justify-center space-y-5 px-10 py-20 md:px-20 md:py-40 lg:pt-40 snap-center"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 1.5 }}
                             key={index}>
                             <motion.img
-                                className="w-24 h-24"
+                                className="w-20 h-20"
                                 src={urlForImage(project.image).url()}
-                                initial={{ y: -300, opacity: 0 }}
+                                initial={{ y: -100, opacity: 0 }}
                                 transition={{ duration: 1.2 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 viewport={{ once: true }}
