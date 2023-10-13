@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { urlForImage } from '../../../sanity/lib/image'
 import Image from 'next/image'
+import { LinkIcon } from '@heroicons/react/24/solid'
 
 import Project from '@/entities/Project'
 import Skill from '@/entities/Skill'
@@ -36,13 +37,13 @@ const Projects = ({ projects }: Props) => {
                 {projects &&
                     projects.sort(orderLogic).map((project, index) => (
                         <motion.div
-                            className="w-screen h-screen flex flex-col flex-shrink-0 items-center justify-center space-y-5 px-10 py-20 md:px-20 md:py-40 lg:pt-40 snap-center"
+                            className="w-full h-screen flex flex-col flex-shrink-0 items-center justify-center space-y-5 px-10 py-20 md:px-20 md:py-40 lg:pt-40 snap-center"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 1.5 }}
                             key={index}>
                             <motion.img
-                                className="w-20 h-20"
+                                className="w-20 h-20 lg:mt-5"
                                 src={urlForImage(project.image).url()}
                                 initial={{ y: -100, opacity: 0 }}
                                 transition={{ duration: 1.2 }}
@@ -54,6 +55,32 @@ const Projects = ({ projects }: Props) => {
                                 <h4 className="text-3xl font-semibold text-center">
                                     {project.title}
                                 </h4>
+
+                                {project.linkToBuild && (
+                                    <div className="flex items-center justify-center text-center space-x-2">
+                                        <LinkIcon className="h-3 w-3 text-[#e66c2c]" />
+                                        <a
+                                            className="ml-2 text-xs text-white hover:text-[#e66c2c]"
+                                            href={project.linkToBuild}>
+                                            GitHub Link
+                                        </a>
+                                        <span>·</span>
+                                        <span className="text-xs">
+                                            {project.date
+                                                .toString()
+                                                .substring(0, 4)}
+                                        </span>
+                                        {project.isNotFinished && (
+                                            <>
+                                                <span>·</span>
+                                                <span className="ml-2 px-2 py-1 text-xs border text-white bg-[#222] rounded-md">
+                                                    Working on it
+                                                </span>
+                                            </>
+                                        )}
+                                    </div>
+                                )}
+
                                 <div className="flex gap-2 justify-center space-x-1 my-3">
                                     {formatSkills(project)}
                                 </div>
