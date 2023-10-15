@@ -36,7 +36,7 @@ const ExperienceCard = ({ experience }: Props) => {
                 <p className="text-lg md:text-xl lg:text-2xl font-bold mt-1">
                     {experience?.company}
                 </p>
-                <div className="flex gap-2 space-x-1 my-3 overflow-x-scroll scrollbar-none">
+                <div className="flex gap-2 space-x-1 my-3 overflow-x-auto scrollbar-none">
                     {experience?.technologies.map((skill: Skill) => (
                         <Image
                             key={skill._id}
