@@ -61,7 +61,8 @@ const Projects = ({ projects }: Props) => {
                                         <LinkIcon className="h-3 w-3 text-[#e66c2c]" />
                                         <a
                                             className="ml-2 text-xs text-white hover:text-[#e66c2c]"
-                                            href={project.linkToBuild}>
+                                            href={project.linkToBuild}
+                                            target="_blank">
                                             GitHub Link
                                         </a>
                                         <span>·</span>
@@ -81,10 +82,10 @@ const Projects = ({ projects }: Props) => {
                                     </div>
                                 )}
 
-                                <div className="flex gap-2 justify-center space-x-1 my-3">
+                                <div className="flex gap-2 justify-center space-x-1 my-3 overflow-x-auto scrollbar-none">
                                     {formatSkills(project)}
                                 </div>
-                                <p className="text-lg p-2 max-h-40 overflow-y-auto scrollbar-custom">
+                                <p className="text-lg px-2 max-h-40 overflow-y-auto scrollbar-custom">
                                     {project.summary}
                                 </p>
                             </div>
