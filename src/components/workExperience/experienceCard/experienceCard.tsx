@@ -18,7 +18,7 @@ const ExperienceCard = ({ experience }: Props) => {
     }
 
     return (
-        <article className="flex flex-col rounded-lg items-center mt-24 p-5 space-y-2 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#222] cursor-pointer opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-hidden">
+        <article className="flex flex-col rounded-lg items-center mt-24 p-5 space-y-2 flex-shrink-0 w-[75vw] snap-center bg-[#222] cursor-pointer opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-hidden">
             {experience?.companyImage && (
                 <motion.img
                     className="w-24 h-24 rounded-full xl:h-[100px] xl:w-[100px] object-cover object-center"
@@ -30,9 +30,13 @@ const ExperienceCard = ({ experience }: Props) => {
                 />
             )}
             <div className="px-5 md:px-10">
-                <h4 className="text-4xl font-light">{experience?.jobTitle}</h4>
-                <p className="text-2xl font-bold mt-1">{experience?.company}</p>
-                <div className="flex gap-2 space-x-1 my-3">
+                <h4 className="text-xl md:text-3xl lg:text-4xl font-light">
+                    {experience?.jobTitle}
+                </h4>
+                <p className="text-lg md:text-xl lg:text-2xl font-bold mt-1">
+                    {experience?.company}
+                </p>
+                <div className="flex gap-2 space-x-1 my-3 overflow-x-scroll scrollbar-none">
                     {experience?.technologies.map((skill: Skill) => (
                         <Image
                             key={skill._id}
@@ -52,7 +56,7 @@ const ExperienceCard = ({ experience }: Props) => {
                         : ` | Ended: ${dateFormat(experience?.dateEnded)}`}
                 </p>
 
-                <ul className="list-none space-y-1 ml-5 text-base max-h-40 overflow-y-auto scrollbar-custom">
+                <ul className="list-none space-y-1 text-sm md:text-base max-h-40 pr-2 overflow-y-auto scrollbar-custom">
                     {experience?.points.map((point: string, index: number) => (
                         <li key={index} className="pl-3">
                             <span className="mr-2">✓</span>
