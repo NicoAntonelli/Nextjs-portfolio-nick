@@ -12,9 +12,10 @@ type Props = {
 }
 
 const ExperienceCard = ({ experience }: Props) => {
+    // Format date with JS standard DateString but without the day's name
     const dateFormat = (date?: Date) => {
         if (!date) return
-        return new Date(date).toDateString()
+        return new Date(date).toDateString().substring(4)
     }
 
     return (
