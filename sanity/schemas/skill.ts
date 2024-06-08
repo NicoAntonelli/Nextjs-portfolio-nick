@@ -18,6 +18,12 @@ export default defineType({
             type: 'string',
         }),
         defineField({
+            name: 'visible',
+            title: 'Visible',
+            description: 'Show in skills section',
+            type: 'boolean',
+        }),
+        defineField({
             name: 'image',
             title: 'Image',
             description: 'Skill logo',

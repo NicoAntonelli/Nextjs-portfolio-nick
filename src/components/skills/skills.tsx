@@ -18,7 +18,8 @@ const Skills = ({ skills }: Props) => {
     const [skillsSorted, setSkillsSorted] = useState<Skill[]>()
 
     useEffect(() => {
-        setSkillsSorted(skills?.sort(orderLogic))
+        // Filter and sort
+        setSkillsSorted(skills?.filter((s) => s.visible).sort(orderLogic))
     }, [])
 
     return (

@@ -9,6 +9,7 @@ interface Skill extends SanityCommon {
     categories: SkillCategory[]
     image: SanityImage
     title: string
+    visible: boolean
 }
 
 export default Skill
