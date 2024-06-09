@@ -19,7 +19,10 @@ const Skills = ({ skills }: Props) => {
 
     useEffect(() => {
         // Filter and sort
-        setSkillsSorted(skills?.filter((s) => s.visible).sort(orderLogic))
+        console.log('Skills debug (after):', skills)
+        skills = skills?.filter((s) => s.visible).sort(orderLogic)
+        setSkillsSorted(skills)
+        console.log('Skills debug (before):', skills)
     }, [])
 
     return (
